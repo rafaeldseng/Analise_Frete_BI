@@ -1,0 +1,11 @@
+﻿IDEntrega,IDCliente,Motorista,UFOrigem,UFDestino,CidadeOrigem,CidadeDestino,ValorFrete,Peso,DataColeta,DataEntregaPrevista,DataEntregaReal,Status
+1001,C001,João Souza,SP,MG,São Paulo,Belo Horizonte,2500,1200,2025-03-10,2025-03-13,2025-03-15,Entregue
+1002,C002,Ana Lima,MG,RJ,Contagem,Rio de Janeiro,3100,900,2025-03-15,2025-03-17,2025-03-18,Entregue
+1003,C003,Paulo Reis,RS,SP,Porto Alegre,Campinas,2100,1000,2025-03-08,2025-03-11,2025-03-10,Entregue
+1004,C004,Lucas Alves,SC,SP,Joinville,São Paulo,2800,1100,2025-03-10,2025-03-13,2025-03-14,Entregue
+1005,C001,Carla Nunes,SP,MG,São Paulo,Uberlândia,2600,800,2025-03-09,2025-03-12,2025-03-14,Atrasado
+1006,C005,Ana Lima,MG,RJ,Betim,Niterói,2950,950,2025-03-12,2025-03-15,2025-03-15,Entregue
+1007,C002,Paulo Reis,RS,PR,Caxias do Sul,Curitiba,2700,1300,2025-03-09,2025-03-12,2025-03-12,Entregue
+1008,C003,João Souza,SP,MG,São Paulo,Juiz de Fora,2400,1000,2025-03-14,2025-03-17,2025-03-20,Atrasado
+1009,C004,Lucas Alves,SC,RS,Florianópolis,Canoas,2200,850,2025-03-11,2025-03-14,2025-03-13,Entregue
+1010,C005,Carla Nunes,SP,ES,São Paulo,Vitória,3300,1200,2025-03-16,2025-03-19,2025-03-21,Atrasado

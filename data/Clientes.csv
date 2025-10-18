@@ -1,0 +1,6 @@
+﻿IDCliente,NomeCliente,Segmento,UF,Cidade,FaturamentoMensal (R$)
+C001,Alfa Indústria Ltda,Indústria,MG,Belo Horizonte,250000
+C002,Beta Distribuidora,Varejo,RJ,Rio de Janeiro,180000
+C003,Gama Alimentos,Alimentício,SP,Campinas,320000
+C004,Delta Importações,Comércio Exterior,RS,Canoas,270000
+C005,Ômega Logística,Logística,ES,Vitória,150000
