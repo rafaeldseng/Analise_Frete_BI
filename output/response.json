@@ -1,0 +1,21 @@
+{
+    "args": {},
+    "data": "{\"frete_medio\": 2665.0, \"percentual_atrasadas\": 60.0}",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate",
+        "Content-Length": "53",
+        "Content-Type": "application/json",
+        "Host": "httpbin.org",
+        "User-Agent": "python-requests/2.32.5",
+        "X-Amzn-Trace-Id": "Root=1-68f4fd90-3b2a35546dba135979e0b08e"
+    },
+    "json": {
+        "frete_medio": 2665.0,
+        "percentual_atrasadas": 60.0
+    },
+    "origin": "170.245.197.29",
+    "url": "https://httpbin.org/post"
+}
