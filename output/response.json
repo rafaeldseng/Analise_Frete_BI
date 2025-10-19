@@ -9,8 +9,8 @@
         "Content-Length": "53",
         "Content-Type": "application/json",
         "Host": "httpbin.org",
-        "User-Agent": "python-requests/2.32.5",
-        "X-Amzn-Trace-Id": "Root=1-68f50566-0321fe5c143f7ab2215b4485"
+        "User-Agent": "python-requests/2.32.3",
+        "X-Amzn-Trace-Id": "Root=1-68f51044-2bd07f527f78fc337a8968f0"
     },
     "json": {
         "frete_medio": 2665.0,
