@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Resposta JSON</title>
+<style>
+body { font-family: monospace; background:#1e1e1e; color:#d4d4d4; padding:20px; }
+h2 { color:#569cd6; }
+pre { background:#252526; padding:15px; border-radius:8px; overflow:auto; }
+.string { color: #ce9178; }
+.number { color: #b5cea8; }
+.boolean { color: #569cd6; }
+.null { color: #569cd6; }
+.key { color: #9cdcfe; }
+</style>
+<script>
+// Função para colorir JSON
+function syntaxHighlight(json) {
+    if (typeof json != 'string') json = JSON.stringify(json, undefined, 4);
+    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return json.replace(/("(\u[a-zA-Z0-9]{4}|\[^u]|[^\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(\.\d*)?(e[+\-]?\d+)?)/g, function (match) {
+        var cls = 'number';
+        if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+                cls = 'key';
+            } else {
+                cls = 'string';
+            }
+        } else if (/true|false/.test(match)) {
+            cls = 'boolean';
+        } else if (/null/.test(match)) {
+            cls = 'null';
+        }
+        return '<span class="' + cls + '">' + match + '</span>';
+    });
+}
+</script>
+</head>
+<body>
+<h2>📤 Enviado</h2>
+<pre id="enviado"></pre>
+<h2>📥 Recebido</h2>
+<pre id="recebido"></pre>
+
+<script>
+document.getElementById("enviado").innerHTML = syntaxHighlight({
+    "frete_medio": 2665.0,
+    "percentual_atrasadas": 60.0
+});
+document.getElementById("recebido").innerHTML = syntaxHighlight({
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate",
+    "Content-Length": "53",
+    "Content-Type": "application/json",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.32.5",
+    "X-Amzn-Trace-Id": "Root=1-68f4fd90-3b2a35546dba135979e0b08e"
+});
+</script>
+</body>
+</html>
