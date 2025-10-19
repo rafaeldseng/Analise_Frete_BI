@@ -79,6 +79,12 @@ Arquivo: `src/etapa3_post_api.py`
 - `Clientes[IDCliente]` - `Entregas[IDCliente]`
 - `Entregas[Motorista]` - `Motoristas[Motorista]`
 
+**Colunas criadas:**
+
+- ` DiasAtraso = Duration.Days( [DataEntregaReal] - [DataEntregaPrevista] )`
+
+- ` StatusEntrega = if Duration.Days([DataEntregaReal] - [DataEntregaPrevista]) <= 0 then "No prazo" else "Atrasado"`
+
 
 **Medidas DAX:**
 ```DAX
@@ -95,6 +101,18 @@ PesoTotalTransportado = SUM(Entregas[Peso])
 ValorTotalFrete = SUM(Entregas[ValorFrete])
 
 TicketMédioCliente = DIVIDE([ValorTotalFrete], DISTINCTCOUNT(Entregas[IDCliente]), 0)
+
+TopClientesFrete = 
+IF([RankFreteCliente]<=[Valor Parâmetro],
+CALCULATE(
+    [TotalFrete_DAX],
+    TOPN(
+        [Valor Parâmetro],
+        VALUES(Clientes),
+        [TotalFrete_DAX]
+    )
+))
+
 ```
 
 ---
@@ -105,6 +123,18 @@ TicketMédioCliente = DIVIDE([ValorTotalFrete], DISTINCTCOUNT(Entregas[IDCliente
 - Top 5 clientes por valor de frete
 - Gráfico de frete médio por motorista
 - KPI Cards: % atrasos, ticket médio, peso total
+
+---
+
+## Estrutura do Projeto
+
+Este projeto demonstrou a análise de dados de uma operação logística fictícia, transformando informações brutas em indicadores estratégicos.
+Com Python e Power BI, foi possível calcular métricas relevantes, modelar dados e criar visualizações interativas que auxiliam na tomada de decisão.
+O repositório serve como referência para estudos em análise de dados, criação de indicadores, BI e boas práticas de organização de projetos e versionamento Git. 
+
+💡 Análise de dados de logística podem ser transformados em insights estratégicos!
+
+Rafael Evangelista
 
 
 
